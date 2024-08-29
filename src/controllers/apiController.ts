@@ -7,7 +7,9 @@ class ApiController {
       const response = await apiService.get<IEventData>(
         "events/get-event-data"
       );
-    } catch (error) {}
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
 export default new ApiController();
