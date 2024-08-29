@@ -4,7 +4,6 @@ import axios, {
   AxiosResponse,
   AxiosRequestConfig,
 } from "axios";
-import { IWorkoutModel } from "@/models/IWorkoutModel";
 
 class ApiService {
   private api: AxiosInstance;
