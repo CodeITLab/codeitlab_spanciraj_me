@@ -75,11 +75,9 @@ class ApiService {
   }
 
   // GET request
-  public async get<T>(url: string, email?: { email: string } | {}): Promise<T> {
+  public async get<T>(url: string): Promise<T> {
     try {
-      const response: AxiosResponse<T> = await this.api.get(url, {
-        params: { email },
-      });
+      const response: AxiosResponse<T> = await this.api.get(url);
       return response.data;
     } catch (error) {
       this.handleError(error as AxiosError);
